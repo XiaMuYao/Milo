@@ -1,27 +1,22 @@
 package com.confluence.milobox.adapter
 
+import androidx.databinding.ViewDataBinding
+import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.viewholder.BaseDataBindingHolder
+
 
 /**
  * 添加子控件点击事件
- * @param T
- * @property brId Int
- * @constructor
  */
-//class BaseClickAdapter<T>(layout: Int, data: MutableList<T>?, var brId: Int, var childList: List<Int>) :
-//    BaseListAdapter<T>(layout, data) {
-//    //    override fun convert(helper: ListViewHolder, item: T?) {
-////        helper.let {
-////            with(it) {
-////                childList.forEach {
-////                    this.addOnClickListener(it)
-////                }
-////
-////                binding.setVariable(brId, item)
-////                binding.executePendingBindings()
-////            }
-////        }
-////    }
-//    override fun convert(holder: BaseListAdapter.ListViewHolder, item: T) {
-//        TODO("Not yet implemented")
-//    }
-//}
+class BaseClickAdapter<T, BD : ViewDataBinding>(layout: Int, data: MutableList<T>?, var brId: Int, var childList: List<Int>?=null) :
+    BaseQuickAdapter<T, BaseDataBindingHolder<BD>>(layout, data) {
+
+    override fun convert(holder: BaseDataBindingHolder<BD>, item: T) {
+        holder.dataBinding?.apply {
+            setVariable(brId, item)
+            executePendingBindings()
+        }
+        childList?.map { addChildClickViewIds(it) }
+    }
+
+}

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.ViewDataBinding
+import com.confluence.milobox.R
 import com.gyf.immersionbar.ImmersionBar
 
 
@@ -36,6 +37,9 @@ abstract class BaseActivity : AppCompatActivity() {
     @SuppressLint("PrivateResource")
     open fun setImmersionBar() {
         ImmersionBar.with(this)
+            .statusBarDarkFont(true)
+            .fitsSystemWindows(true)
+            .barColor(R.color.white).init()
     }
 
     open fun initBaseLiveDataCallBack() {}
@@ -50,6 +54,7 @@ abstract class BaseActivity : AppCompatActivity() {
      *  接受上一个界面传递的参数
      */
     open fun initParam() {}
+
 
     /**
      * 初始化页面数据

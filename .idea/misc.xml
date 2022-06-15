@@ -3,8 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_base.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_community.xml" value="0.5369791666666667" />
         <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_main.xml" value="0.5359375" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_my.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_new_hot.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_new_top.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_news.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_select_game.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_setting.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_test.xml" value="0.5087378640776699" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_top_new.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/fragment_community.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/fragment_my.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/fragment_new_hot.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/fragment_new_top.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/fragment_new_top_list.xml" value="0.5359375" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/fragment_news.xml" value="0.33" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/fragment_user.xml" value="0.29791666666666666" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/item_hot.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/item_new_hot.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/item_new_top.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/layout_tab.xml" value="0.3536458333333333" />
         <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/menu/menu_main.xml" value="0.29791666666666666" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/menu/my_navigation_items.xml" value="0.5369791666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.36302083333333335" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.3640625" />

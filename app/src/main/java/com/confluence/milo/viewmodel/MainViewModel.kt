@@ -1,15 +1,14 @@
-package com.confluence.milo
+package com.confluence.milo.viewmodel
 
-import com.confluence.milobox.BaseViewModel
+import com.confluence.milo.model.MainRepository
+import com.confluence.milobox.base.BaseViewModel
 
 /**
  * ================================================
  * 介    绍：
  * ================================================
  */
-class MainViewModel : BaseViewModel() {
-
-    private val repository by lazy { MainRepository() }
+class MainViewModel(private val repository: MainRepository) : BaseViewModel() {
 
     override fun initData() {
 

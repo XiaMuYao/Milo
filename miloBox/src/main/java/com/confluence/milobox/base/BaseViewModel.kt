@@ -1,4 +1,4 @@
-package com.confluence.milobox
+package com.confluence.milobox.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

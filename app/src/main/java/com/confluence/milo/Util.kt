@@ -5,6 +5,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.widget.Toast
 
 
@@ -41,7 +42,8 @@ object Util {
         context: Context, packageName: String
     ) {
         try {
-            val intent: Intent = context.packageManager.getLaunchIntentForPackage(packageName) as Intent
+            val url = "bazhang://com.upgadata.up7723/splash"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
             context.startActivity(intent)
         } catch (e: Exception) {
             Toast.makeText(context, "启动失败 App不存在或者其他异常！", Toast.LENGTH_SHORT).show()

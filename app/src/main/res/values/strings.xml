@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Milo</string>
+    <string name="app_name">7723游戏盒发帖助手</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">胡代表</string>
+    <string name="nav_header_subtitle">4245218@qq.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="action_help">使用帮助</string>
+    <string name="action_about">关于软件</string>
+
+
+    <string name="menu_home">关于软件</string>
+    <string name="menu_gallery">使用帮助</string>
+    <string name="help">每个模块只需要填入你需要发布的信息即可，标注美化线的地方是用了美化线条，可以不用填写，软件可以在线查看apk信息，右上角可以切换更多美化版本模式，生成的美化线条在本软件的生成弹窗里可能会乱，但是复制到软件里就是完整的格式不会乱的，可以先点击生成看一下模板哦</string>
+    <string name="about">软件发帖助手由胡代表开发制作，帮助大家发帖子使用，快捷栏属性已经写好了，也做了一些美化模板，填写软件相关信息，生成一键复制就可以啦，后面会出更多模板，更快捷方便人性化的发帖助手！有问题可以到反馈交流群反馈哦</string>
+
 </resources>

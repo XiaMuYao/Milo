@@ -19,7 +19,18 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.Milo.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Milo.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@android:color/black</item>
 
-    <style name="Theme.Milo.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    </style>
+
+
+    <style name="Theme.Milo.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
+        <item name="colorControlNormal">@android:color/black</item>
+
+    </style>
+
+
+
+
 </resources>

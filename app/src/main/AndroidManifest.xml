@@ -3,7 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.confluence.milo">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".MiloApplication"
         android:allowBackup="true"
@@ -23,7 +27,24 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="um.62b6a9e305844627b5c64b38" />
+            </intent-filter>
+
         </activity>
+        <activity
+            android:name=".view.UtilitySoftwareActivity"
+            android:theme="@style/Theme.Milo.NoActionBar"/>
+        <activity
+            android:name=".view.OriginalActivity"
+            android:theme="@style/Theme.Milo.NoActionBar" />
+        <activity
+            android:name=".view.GameActivity"
+            android:theme="@style/Theme.Milo.NoActionBar" />
     </application>
 
 </manifest>

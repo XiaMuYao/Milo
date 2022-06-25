@@ -38,7 +38,7 @@ class UtilitySoftwareActivity : BaseActivity() {
     override fun initView() {
         binding.generateBtn.setOnClickListener {
             val message =
-                "【软件名称】${binding.name.text} \n" +
+                        "【软件名称】${binding.name.text} \n" +
                         "【软件包名】${binding.packageName.text} \n" +
                         "【软件版本】${binding.version.text} \n" +
                         "【软件语言】${binding.language.text} \n" +
@@ -60,7 +60,7 @@ class UtilitySoftwareActivity : BaseActivity() {
         binding.startApp.setOnClickListener {
             Util.startApp(this, "com.upgadata.up7723")
         }
-        binding.back?.setOnClickListener { finish() }
+        binding.back.setOnClickListener { finish() }
     }
 
     override fun initVVMObserver() {

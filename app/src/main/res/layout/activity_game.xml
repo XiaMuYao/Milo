@@ -73,7 +73,7 @@
                         android:layout_width="match_parent"
 
                         android:layout_height="wrap_content"
-                        android:hint="输入软件包名"
+                        android:hint="输入游戏包名"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -91,9 +91,8 @@
                     <EditText
                         android:id="@+id/version"
                         android:layout_width="match_parent"
-
                         android:layout_height="wrap_content"
-                        android:hint="输入软件版本"
+                        android:hint="输入游戏版本"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -132,8 +131,7 @@
                         android:id="@+id/language"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-                        android:hint="输入软件语言"
+                        android:hint="输入游戏语言"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -171,7 +169,7 @@
                         android:id="@+id/systemVersion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="输入软件系统版本"
+                        android:hint="输入系统版本"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
                 </LinearLayout>

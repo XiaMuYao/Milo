@@ -53,7 +53,7 @@
                         android:id="@+id/name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="输入软件/资源的介绍/点评"
+                        android:hint="输入软件名称"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -153,7 +153,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="输入软件/资源的介绍/点评"
-
                         android:textColor="@color/black"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -192,7 +191,7 @@
                         android:id="@+id/address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="输入软件/资源的介绍/点评"
+                        android:hint="输入下载地址"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
                 </LinearLayout>

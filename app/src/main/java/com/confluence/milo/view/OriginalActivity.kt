@@ -35,15 +35,16 @@ class OriginalActivity : BaseActivity() {
 
     override fun initView() {
         binding.generateBtn.setOnClickListener {
-            val message = "【游戏名称】${binding.name.text}\n" +
+            val message =
+                    "【游戏名称】${binding.name.text}\n" +
                     "【游戏包名】${binding.packageName.text}\n" +
                     "【游戏版本】${binding.version.text}\n" +
                     "【游戏大小】${binding.size.text}\n" +
                     "【游戏语言】${binding.language.text}\n" +
                     "【开发代号】${binding.code.text}\n" +
                     "【系统版本】${binding.systemVersion.text}\n" +
-                    "【特别说明】${binding.description.text}\n" +
                     "【游戏简介】${binding.introduction.text}\n" +
+                    "【特别说明】${binding.description.text}\n" +
                     "【下载地址】${binding.address.text}\n" +
                     "\n" +
                     "===============游戏截图================\n"

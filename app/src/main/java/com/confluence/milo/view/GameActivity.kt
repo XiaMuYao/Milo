@@ -6,7 +6,6 @@ import android.provider.Settings
 import com.confluence.milo.R
 import com.confluence.milo.Util
 import com.confluence.milo.databinding.ActivityGameBinding
-import com.confluence.milo.databinding.ActivityUtilitySoftwareBinding
 import com.confluence.milo.viewmodel.MainViewModel
 import com.confluence.milobox.base.BaseActivity
 import com.confluence.milobox.viewBinding
@@ -39,18 +38,20 @@ class GameActivity : BaseActivity() {
     override fun initView() {
         binding.generateBtn.setOnClickListener {
             val message =
-                    "【软件名称】${binding.name.text} \n" +
-                    "【软件包名】${binding.packageName.text} \n" +
-                    "【软件版本】${binding.version.text} \n" +
-                    "【软件语言】${binding.language.text} \n" +
-                    "【软件大小】${binding.size.text} \n" +
-                    "【软件介绍】${binding.introduction.text} \n" +
-                    "【特别说明】${binding.description.text} \n" +
-                    "【下载地址】${binding.address.text} \n" +
-                    "\n" +
-                    "====================================\n" +
-                    "点赞+评论+关注\n" +
-                    "喜欢就打赏支持一下"
+                        "【游戏名称】${binding.name.text} \n" +
+                        "【游戏包名】${binding.packageName.text} \n" +
+                        "【游戏版本】${binding.version.text} \n" +
+                        "【游戏大小】${binding.size.text} \n" +
+                        "【游戏语言】${binding.language.text} \n" +
+                        "【开发代号】${binding.code.text} \n" +
+                        "【系统版本】${binding.systemVersion.text} \n" +
+                        "【游戏介绍】${binding.introduction.text} \n" +
+                        "【特别说明】${binding.description.text} \n" +
+                        "【下载地址】${binding.address.text} \n" +
+                        "\n" +
+                        "====================================\n" +
+                        "点赞+评论+关注\n" +
+                        "喜欢就打赏支持一下"
 
             Util.showDialog(this, message)
         }

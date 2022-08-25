@@ -6,6 +6,9 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.component.KoinComponent
 import org.koin.core.context.GlobalContext.startKoin
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
 
 /**
  * ================================================
@@ -21,5 +24,10 @@ class MiloApplication : Application(), KoinComponent {
             androidContext(this@MiloApplication)
             modules(appModule)
         }
+
+         Retrofit.Builder()
+            .baseUrl("http://localhost:4567/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
     }
 }

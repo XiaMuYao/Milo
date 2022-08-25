@@ -13,7 +13,7 @@ class MainActivity : BaseActivity() {
     override val viewModel: MainViewModel by viewModel()
     override val binding by viewBinding(ActivityMainBinding::inflate)
 
-    val mainViewPagerAdapter =
+    private val mainViewPagerAdapter =
         BaseViewPagerAdapter(
             this, arrayListOf(
                 UserFragment.newInstance(),

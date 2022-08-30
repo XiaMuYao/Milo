@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.confluence.milo">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+
     <application
         android:name=".MiloApplication"
         android:allowBackup="true"
@@ -24,6 +27,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name="BootBroadCastReceiver"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+
+            <intent-filter>
+                <!-- SD卡已经成功挂载   -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <!-- sd卡存在，但还没有挂载   -->
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+
+                <data android:scheme="file" />
+
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+
+
+        </receiver>
+
     </application>
 
 </manifest>

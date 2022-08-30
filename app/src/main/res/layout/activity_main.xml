@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="mainViewModel"
             type="com.confluence.milo.viewmodel.MainViewModel" />
@@ -15,36 +14,22 @@
         android:layout_height="match_parent"
         tools:context=".view.MainActivity">
 
-
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="134dp"
             android:text="Button"
-            app:layout_constraintBottom_toTopOf="@+id/fragment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <fragment
-            android:id="@+id/fragment"
-            android:name="com.confluence.milo.view.UserFragment"
-            android:layout_width="300dp"
-            android:layout_height="0dp"
-            android:layout_marginEnd="56dp"
-            android:layout_marginBottom="249dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
-
-
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/ViewPager2"
-            android:layout_width="400dp"
-            android:layout_height="400dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

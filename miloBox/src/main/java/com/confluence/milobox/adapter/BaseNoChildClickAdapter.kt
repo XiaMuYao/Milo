@@ -1,15 +1,25 @@
 package com.confluence.milobox.adapter
 
+import androidx.databinding.ViewDataBinding
+import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.viewholder.BaseDataBindingHolder
+
 /**
  * 不需要子控件点击使用这个
  */
-//class BaseNoChildClickAdapter<T>(layout: Int, data: MutableList<T>?, private var brId: Int) :
-//    BaseListAdapter<T>(layout, data) {
-//
-//    override fun convert(holder: ListViewHolder, item: T) {
-//        with(holder) {
-//            binding.setVariable(brId, item)
-//            binding.executePendingBindings()
-//        }
-//    }
-//}
+class BaseNoChildClickAdapter<BD : ViewDataBinding, T>(
+    var itemBrId: Int,
+    var itemLayoutId: Int,
+    var sourceList: MutableList<T>?,
+) : BaseQuickAdapter<T, BaseDataBindingHolder<BD>>(itemLayoutId, sourceList) {
+
+
+    override fun convert(holder: BaseDataBindingHolder<BD>, item: T) {
+        holder.dataBinding?.let {
+            it.setVariable(itemBrId, item)
+            it.executePendingBindings()
+        }
+    }
+
+
+}

@@ -4,7 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/activity_main.xml" value="0.5359375" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/fragment_user.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/layout/item_test_list.xml" value="0.5359375" />
         <entry key="..\:/Project/GitHub/Android/milo/app/src/main/res/menu/menu_main.xml" value="0.29791666666666666" />
+        <entry key="..\:/Project/GitHub/Android/milo/miloBox/src/main/res/layout/activity_main.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/miloBox/src/main/res/layout/base_header.xml" value="0.5369791666666667" />
+        <entry key="..\:/Project/GitHub/Android/milo/miloBox/src/main/res/layout/item_test_list.xml" value="0.5369791666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.36302083333333335" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.3640625" />

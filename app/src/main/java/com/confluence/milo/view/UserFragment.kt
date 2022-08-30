@@ -11,6 +11,7 @@ import com.confluence.milobox.viewBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UserFragment : BaseFragment() {
+
     override val viewModel: MainViewModel by viewModel()
     override val binding: FragmentUserBinding by lazy { viewBinding(FragmentUserBinding::inflate) }
 
@@ -33,7 +34,6 @@ class UserFragment : BaseFragment() {
 
     override fun initViewModelBindValue() {
     }
-
 
 }
 

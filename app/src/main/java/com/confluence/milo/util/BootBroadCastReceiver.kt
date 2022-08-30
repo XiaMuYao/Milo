@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.widget.Toast
 import com.confluence.milo.MiloApplication
+import com.confluence.milobox.LL
 
 class BootBroadCastReceiver : BroadcastReceiver() {
 
@@ -12,6 +13,7 @@ class BootBroadCastReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         if (ACTION_BOOT == intent.action) {
+            LL.d("restart:${MiloApplication.instance().packageName}")
             Toast.makeText(context, "restart:${MiloApplication.instance().packageName}", Toast.LENGTH_SHORT).show()
         }
     }

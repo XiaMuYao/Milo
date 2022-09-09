@@ -51,15 +51,17 @@ class BaseBottomMenu : ConstraintLayout {
 
     interface BaseBottomMenuCallBack {
         fun menuSelectCallBack(id: MainTabPage, ordinal: Int) {}
+        fun onPageSelected(position: Int){}
     }
 
-    fun setCallBackAndViewPager(callBack: BaseBottomMenuCallBack, viewPager: ViewPager2) {
+    fun setCallBackAndViewPager(viewPager: ViewPager2,callBack: BaseBottomMenuCallBack) {
         baseBottomMenuCallBack = callBack
         insideViewpager = viewPager
 
         insideViewpager?.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
+                baseBottomMenuCallBack?.onPageSelected(position)
                 LL.d("position::${position}")
             }
         })

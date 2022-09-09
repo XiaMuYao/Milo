@@ -9,10 +9,9 @@ import com.chad.library.adapter.base.viewholder.BaseDataBindingHolder
  */
 class BaseNoChildClickAdapter<BD : ViewDataBinding, T>(
     var itemBrId: Int,
-    var itemLayoutId: Int,
-    var sourceList: MutableList<T>?,
+    itemLayoutId: Int,
+    sourceList: MutableList<T>?,
 ) : BaseQuickAdapter<T, BaseDataBindingHolder<BD>>(itemLayoutId, sourceList) {
-
 
     override fun convert(holder: BaseDataBindingHolder<BD>, item: T) {
         holder.dataBinding?.let {

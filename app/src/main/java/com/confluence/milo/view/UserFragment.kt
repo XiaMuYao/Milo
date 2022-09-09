@@ -1,5 +1,6 @@
 package com.confluence.milo.view
 
+import androidx.core.os.bundleOf
 import com.confluence.milo.BR
 import com.confluence.milo.R
 import com.confluence.milo.databinding.FragmentUserBinding
@@ -16,16 +17,21 @@ class UserFragment : BaseFragment() {
     override val binding: FragmentUserBinding by lazy { viewBinding(FragmentUserBinding::inflate) }
 
     private val testAdapter: BaseNoChildClickAdapter<FragmentUserBinding, String> by lazy {
-        BaseNoChildClickAdapter(BR.itemString, R.layout.item_test_list,(0..5).map { it.toString() }.toMutableList())
+        BaseNoChildClickAdapter(BR.itemString, R.layout.item_test_list, (0..5).map { it.toString() }.toMutableList())
     }
 
     companion object {
-        fun newInstance(): UserFragment {
-            return UserFragment()
+        fun newInstance(index: Int): UserFragment {
+            val fragment = UserFragment()
+            fragment.arguments = bundleOf().apply {
+                putInt("index", index)
+            }
+            return fragment
         }
     }
 
     override fun initView() {
+        binding.indexTv.text = arguments?.getInt("index").toString()
         binding.userRv.defaultStyle(testAdapter)
     }
 

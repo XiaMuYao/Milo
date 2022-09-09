@@ -16,15 +16,16 @@ class MainActivity : BaseActivity() {
     override val binding by viewBinding(ActivityMainBinding::inflate)
 
     private val mainViewPagerAdapter =
-        BaseViewPagerAdapter(this, arrayListOf(UserFragment.newInstance(), UserFragment.newInstance(), UserFragment.newInstance()))
+        BaseViewPagerAdapter(this, (0..4).map { UserFragment.newInstance(it) }.toMutableList())
 
     override fun initView() {
         binding.ViewPager2.adapter = mainViewPagerAdapter
-        binding.bottomMenuBBM.setCallBackAndViewPager(object : BaseBottomMenu.BaseBottomMenuCallBack {
+        binding.bottomMenuBBM.setCallBackAndViewPager(binding.ViewPager2, object : BaseBottomMenu.BaseBottomMenuCallBack {
             override fun menuSelectCallBack(id: BaseBottomMenu.MainTabPage, ordinal: Int) {
                 LL.d("id::${id}")
             }
-        }, binding.ViewPager2)
+        })
+
         binding.headerBH.baseHeaderCallBack = object : BaseHeader.BaseHeaderCallBack {
             override fun back() {
                 LL.d("back")
@@ -34,7 +35,10 @@ class MainActivity : BaseActivity() {
                 LL.d("menu")
             }
         }
+
+        binding.button.setOnClickListener {}
     }
+
 
     override fun initVVMObserver() {
 

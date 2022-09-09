@@ -50,8 +50,8 @@ class BaseBottomMenu : ConstraintLayout {
     lateinit var binding: BaseBottomMenuBinding
 
     interface BaseBottomMenuCallBack {
-        fun menuSelectCallBack(id: MainTabPage, ordinal: Int) {}
-        fun onPageSelected(position: Int){}
+        fun menuSelectCallBack(id: MainTabPage, ordinal: Int)
+        fun onPageSelected(position: Int)
     }
 
     fun setCallBackAndViewPager(viewPager: ViewPager2,callBack: BaseBottomMenuCallBack) {

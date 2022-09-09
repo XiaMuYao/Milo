@@ -9,8 +9,10 @@ import com.confluence.milobox.base.BaseResponse
  */
 class MainRepository(var remoteUserSource: RemoteUserSource) {
 
-     suspend fun getUserList(): BaseResponse<String> {
+    suspend fun getUserList(): BaseResponse<String> {
         return remoteUserSource.getUserList()
     }
+
+    suspend fun getBanner() = remoteUserSource.getBanner()
 
 }

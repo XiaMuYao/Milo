@@ -17,8 +17,11 @@ class MainViewModel(private val repository: MainRepository) : BaseViewModel() {
     }
 
 
-    fun getListData() {
-
+    fun getBanner() {
+        request {
+            val data = repository.getBanner()
+            data
+        }
     }
 
 

@@ -8,7 +8,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-abstract class BaseViewModel() : ViewModel(){
+abstract class BaseViewModel : ViewModel(){
     //上拉加载结束
     val loadMoreStatus = MutableLiveData<Boolean>()
     //下拉刷新结束
@@ -25,7 +25,7 @@ abstract class BaseViewModel() : ViewModel(){
     open fun <T> request(block: suspend () -> T): Job {
         return viewModelScope.launch(Dispatchers.IO) {
             try {
-                block()
+                block.invoke()
             } catch (t: Throwable) {
                 t.printStackTrace()
             }
@@ -36,7 +36,7 @@ abstract class BaseViewModel() : ViewModel(){
         showLoading.postValue(true)
     }
 
-    fun dissLoading() {
+    fun disappearLoading() {
         showLoading.postValue(false)
     }
 

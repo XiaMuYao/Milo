@@ -24,6 +24,9 @@ class MainActivity : BaseActivity() {
             override fun menuSelectCallBack(id: BaseBottomMenu.MainTabPage, ordinal: Int) {
                 LL.d("id::${id}")
             }
+
+            override fun onPageSelected(position: Int) {
+            }
         })
 
         binding.headerBH.baseHeaderCallBack = object : BaseHeader.BaseHeaderCallBack {
@@ -36,7 +39,9 @@ class MainActivity : BaseActivity() {
             }
         }
 
-        binding.button.setOnClickListener {}
+        binding.button.setOnClickListener {
+            viewModel.getBanner()
+        }
     }
 
 

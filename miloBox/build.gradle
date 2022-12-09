@@ -34,7 +34,7 @@ dependencies {
     api 'androidx.core:core-ktx:1.9.0'
     api 'androidx.appcompat:appcompat:1.5.1'
     api 'com.google.android.material:material:1.7.0'
-    testImplementation 'junit:junit:4.13.2'
+    testApi 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
@@ -72,24 +72,29 @@ dependencies {
     api "com.squareup.retrofit2:converter-gson:2.9.0"
     api "com.squareup.okhttp3:logging-interceptor:4.9.1"
 
+    def koin_version= "3.2.2"
 
-// Koin for JUnit 4
+    // Koin Core features
+    api "io.insert-koin:koin-core:$koin_version"
+    // Koin Test features
+    testApi "io.insert-koin:koin-test:$koin_version"
+
+    // Koin for JUnit 4
     testApi "io.insert-koin:koin-test-junit4:$koin_version"
-// Koin for JUnit 5
+    // Koin for JUnit 5
     testApi "io.insert-koin:koin-test-junit5:$koin_version"
 
 
-    def koin_android_version= "3.3.0"
+    def  koin_android_version= "3.3.0"
     // Koin main features for Android
     api "io.insert-koin:koin-android:$koin_android_version"
     // Java Compatibility
     api "io.insert-koin:koin-android-compat:$koin_android_version"
-    //koin
-    def koin_version= "3.2.2"
-    // Koin Core features
-    api "io.insert-koin:koin-core:$koin_version"
-// Koin Test features
-    testApi "io.insert-koin:koin-test:$koin_version"
+    // Jetpack WorkManager
+    api "io.insert-koin:koin-androidx-workmanager:$koin_android_version"
+    // Navigation Graph
+    api "io.insert-koin:koin-androidx-navigation:$koin_android_version"
+
 
 
     //SmartRefreshLayout

@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.widget.Toast
 import com.confluence.milo.MiloApplication
-import com.confluence.milobox.LL
+import com.confluence.milobox.utils.LL
 
 class BootBroadCastReceiver : BroadcastReceiver() {
 

@@ -7,8 +7,8 @@ import com.confluence.milo.databinding.FragmentUserBinding
 import com.confluence.milo.viewmodel.MainViewModel
 import com.confluence.milobox.adapter.BaseNoChildClickAdapter
 import com.confluence.milobox.base.BaseFragment
-import com.confluence.milobox.ex.defaultStyle
-import com.confluence.milobox.viewBinding
+import com.confluence.milobox.extension.defaultStyle
+import com.confluence.milobox.extension.viewBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UserFragment : BaseFragment() {

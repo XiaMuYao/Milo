@@ -1,6 +1,7 @@
-package com.confluence.milobox
+package com.confluence.milobox.utils
 
 import android.util.Log
+import com.confluence.milobox.BuildConfig
 
 /**
  * ================================================
@@ -8,7 +9,8 @@ import android.util.Log
  * 描    述：日志工具
  * ================================================
  */
-object LL {
+typealias LL  = LogUtil
+object LogUtil {
     private val DEBUG = BuildConfig.DEBUG
     /**
      * 类名

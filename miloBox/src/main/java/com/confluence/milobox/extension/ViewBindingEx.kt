@@ -1,4 +1,4 @@
-package com.confluence.milobox
+package com.confluence.milobox.extension
 
 import android.app.Activity
 import android.view.LayoutInflater

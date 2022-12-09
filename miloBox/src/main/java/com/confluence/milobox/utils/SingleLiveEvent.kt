@@ -1,4 +1,4 @@
-package com.confluence.milobox
+package com.confluence.milobox.utils
 
 import android.util.Log
 import androidx.annotation.MainThread

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
-import com.confluence.milobox.LL
+import com.confluence.milobox.utils.LL
 
 
 abstract class BaseFragment : Fragment() {
@@ -33,7 +33,6 @@ abstract class BaseFragment : Fragment() {
         //注册基本的事件回调
         initVVMObserver()
     }
-
 
     /**
      * 初始化View

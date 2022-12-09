@@ -1,4 +1,4 @@
-package com.confluence.milobox.ex
+package com.confluence.milobox.extension
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView

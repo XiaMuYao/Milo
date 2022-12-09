@@ -1,4 +1,4 @@
-package com.confluence.milobox
+package com.confluence.milobox.utils
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

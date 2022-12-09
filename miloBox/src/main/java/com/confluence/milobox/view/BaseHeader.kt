@@ -16,15 +16,6 @@ import com.confluence.milobox.databinding.BaseHeaderBinding
  */
 class BaseHeader : ConstraintLayout {
 
-    //region companion object
-    companion object {
-        var HOME = "HOME"
-        var MESSAGE = "MESSAGE"
-        var FIND = "FIND"
-        var MY = "MY"
-    }
-    //endregion
-
     //region constructor
     constructor(context: Context) : super(context) {
         initView()
@@ -41,7 +32,6 @@ class BaseHeader : ConstraintLayout {
     ) {
         initView()
     }
-
     //endregion
 
     var baseHeaderCallBack: BaseHeaderCallBack? = null

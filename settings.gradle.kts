@@ -5,9 +5,9 @@ pluginManagement {
     repositories {
         maven("https://maven.aliyun.com/repository/public")
         maven("https://jitpack.io")
-        gradlePluginPortal()
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {

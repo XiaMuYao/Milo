@@ -9,17 +9,21 @@ import com.confluence.milobox.BuildConfig
  * 描    述：日志工具
  * ================================================
  */
-typealias LL  = LogUtil
+typealias LL = LogUtil
+
 object LogUtil {
     private val DEBUG = BuildConfig.DEBUG
+
     /**
      * 类名
      */
     lateinit var className: String
+
     /**
      * 方法名
      */
     lateinit var methodName: String
+
     /**
      * 行数
      */

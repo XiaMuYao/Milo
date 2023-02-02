@@ -19,14 +19,14 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs  {
+    signingConfigs {
         getByName("debug") {
             storeFile = file("D:\\Project\\GitHub\\Android\\confluence.jks")
             keyAlias = "xiamuyao"
             storePassword = "xmy73562418"
             keyPassword = "xmy73562418"
         }
-        create("release"){
+        create("release") {
             storeFile = file("D:\\Project\\GitHub\\Android\\confluence.jks")
             keyAlias = "xiamuyao"
             storePassword = "xmy73562418"
@@ -36,7 +36,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled =false
+            isMinifyEnabled = false
             proguardFile("proguard-android-optimize.txt")
         }
     }
@@ -45,13 +45,13 @@ android {
         targetCompatibility(JavaVersion.VERSION_11)
     }
 
-    kotlinOptions.jvmTarget= JavaVersion.VERSION_11.majorVersion
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.majorVersion
 
     buildFeatures.dataBinding = true
 
     applicationVariants.all {
         outputs.all {
-            if (this is ApkVariantOutputImpl){
+            if (this is ApkVariantOutputImpl) {
                 this.outputFileName = "Milo_app_$versionName.apk"
             }
         }
@@ -59,12 +59,12 @@ android {
 
 }
 dependencies {
-    implementation ("androidx.core:core-ktx:1.9.0")
-    implementation ("androidx.appcompat:appcompat:1.5.1")
-    implementation ("com.google.android.material:material:1.7.0")
-    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation( project(path = ":miloBox"))
-    testImplementation ("junit:junit:4.13.2")
-    androidTestImplementation( "androidx.test.ext:junit:1.1.4")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.0")
+    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("com.google.android.material:material:1.7.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation(project(path = ":miloBox"))
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.4")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
 }

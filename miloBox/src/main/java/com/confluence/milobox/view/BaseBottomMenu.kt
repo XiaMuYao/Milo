@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager2.widget.ViewPager2
-import com.confluence.milobox.utils.LL
 import com.confluence.milobox.R
 import com.confluence.milobox.databinding.BaseBottomMenuBinding
+import com.confluence.milobox.utils.LL
 
 /**
  * ================================================
@@ -54,7 +54,7 @@ class BaseBottomMenu : ConstraintLayout {
         fun onPageSelected(position: Int)
     }
 
-    fun setCallBackAndViewPager(viewPager: ViewPager2,callBack: BaseBottomMenuCallBack) {
+    fun setCallBackAndViewPager(viewPager: ViewPager2, callBack: BaseBottomMenuCallBack) {
         baseBottomMenuCallBack = callBack
         insideViewpager = viewPager
 

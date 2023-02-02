@@ -8,15 +8,19 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-abstract class BaseViewModel : ViewModel(){
+abstract class BaseViewModel : ViewModel() {
     //上拉加载结束
     val loadMoreStatus = MutableLiveData<Boolean>()
+
     //下拉刷新结束
     val refreshStatus = MutableLiveData<Boolean>()
+
     //是否还有更多数据
     val hasMore = MutableLiveData(true)
+
     //loadOk
     var loadOK = MutableLiveData<Boolean>()
+
     //loading
     var showLoading = MutableLiveData<Boolean>()
 

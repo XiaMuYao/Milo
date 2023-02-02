@@ -1,5 +1,5 @@
 rootProject.name = "Milo"
-include( ":app",":miloBox")
+include(":app", ":miloBox")
 
 pluginManagement {
     repositories {

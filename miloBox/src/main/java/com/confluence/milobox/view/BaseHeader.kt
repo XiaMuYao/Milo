@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
 import com.confluence.milobox.R
-import com.confluence.milobox.databinding.BaseBottomMenuBinding
 import com.confluence.milobox.databinding.BaseHeaderBinding
 
 /**
@@ -37,8 +36,8 @@ class BaseHeader : ConstraintLayout {
     var baseHeaderCallBack: BaseHeaderCallBack? = null
 
     interface BaseHeaderCallBack {
-        fun back(){}
-        fun menu(){}
+        fun back() {}
+        fun menu() {}
     }
 
     lateinit var binding: BaseHeaderBinding

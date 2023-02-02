@@ -11,7 +11,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter
  */
 fun RecyclerView.defaultStyle(
     mAdapter: BaseQuickAdapter<*, *>,
-    LayoutManager: RecyclerView.LayoutManager? = LinearLayoutManager(context)
+    LayoutManager: RecyclerView.LayoutManager? = LinearLayoutManager(context),
 ) {
     this.adapter = mAdapter
     this.layoutManager = LayoutManager

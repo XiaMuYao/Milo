@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.ViewDataBinding
 import com.gyf.immersionbar.ImmersionBar
 
-
 abstract class BaseActivity : AppCompatActivity() {
     abstract val binding: ViewDataBinding
 

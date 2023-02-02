@@ -1,18 +1,18 @@
 package com.confluence.milo.view
 
+import androidx.activity.viewModels
 import com.confluence.milo.databinding.ActivityMainBinding
 import com.confluence.milo.viewmodel.MainViewModel
 import com.confluence.milobox.adapter.BaseViewPagerAdapter
 import com.confluence.milobox.base.BaseActivity
+import com.confluence.milobox.extension.viewBinding
 import com.confluence.milobox.utils.LL
 import com.confluence.milobox.view.BaseBottomMenu
 import com.confluence.milobox.view.BaseHeader
-import com.confluence.milobox.extension.viewBinding
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity() {
 
-    override val viewModel: MainViewModel by viewModel()
+    override val viewModel: MainViewModel by viewModels()
     override val binding by viewBinding(ActivityMainBinding::inflate)
 
     private val mainViewPagerAdapter =

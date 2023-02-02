@@ -1,6 +1,7 @@
 package com.confluence.milo.view
 
 import androidx.core.os.bundleOf
+import androidx.fragment.app.viewModels
 import com.confluence.milo.BR
 import com.confluence.milo.R
 import com.confluence.milo.databinding.FragmentUserBinding
@@ -9,11 +10,10 @@ import com.confluence.milobox.adapter.BaseNoChildClickAdapter
 import com.confluence.milobox.base.BaseFragment
 import com.confluence.milobox.extension.defaultStyle
 import com.confluence.milobox.extension.viewBinding
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UserFragment : BaseFragment() {
 
-    override val viewModel: MainViewModel by viewModel()
+    override val viewModel: MainViewModel by viewModels()
     override val binding: FragmentUserBinding by lazy { viewBinding(FragmentUserBinding::inflate) }
 
     private val testAdapter: BaseNoChildClickAdapter<FragmentUserBinding, String> by lazy {

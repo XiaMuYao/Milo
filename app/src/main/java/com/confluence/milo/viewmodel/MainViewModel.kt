@@ -1,16 +1,13 @@
 package com.confluence.milo.viewmodel
 
-import com.confluence.milo.model.MainRepository
 import com.confluence.milobox.base.BaseViewModel
-import kotlinx.coroutines.*
-import kotlin.system.measureTimeMillis
 
 /**
  * ================================================
  * 介    绍：
  * ================================================
  */
-class MainViewModel(private val repository: MainRepository) : BaseViewModel() {
+class MainViewModel : BaseViewModel() {
 
     override fun initData() {
 
@@ -18,10 +15,11 @@ class MainViewModel(private val repository: MainRepository) : BaseViewModel() {
 
 
     fun getBanner() {
-        request {
-            val data = repository.getBanner()
-            data
-        }
+//        request {
+//            private val repository: MainRepository
+//            val data = repository.getBanner()
+//            data
+//        }
     }
 
 

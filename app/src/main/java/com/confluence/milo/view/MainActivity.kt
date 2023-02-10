@@ -9,7 +9,9 @@ import com.confluence.milobox.extension.viewBinding
 import com.confluence.milobox.utils.LL
 import com.confluence.milobox.view.BaseBottomMenu
 import com.confluence.milobox.view.BaseHeader
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity() {
 
     override val viewModel: MainViewModel by viewModels()
@@ -40,7 +42,7 @@ class MainActivity : BaseActivity() {
         }
 
         binding.button.setOnClickListener {
-            viewModel.getBanner()
+            viewModel.getSerialCall()
         }
     }
 

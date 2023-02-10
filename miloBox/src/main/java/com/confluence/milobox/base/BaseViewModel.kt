@@ -3,7 +3,6 @@ package com.confluence.milobox.base
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -35,6 +34,7 @@ abstract class BaseViewModel : ViewModel() {
             }
         }
     }
+
 
     fun showLoading() {
         showLoading.postValue(true)

@@ -42,7 +42,7 @@ dependencies {
 
 
     // Brvah
-    api("com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7")
+    api("io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.0-beta02")
 
     // lifecycle
     val lifecycleVersion = "2.5.1"
@@ -53,10 +53,15 @@ dependencies {
     api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
 
 
+    val roomVersion = "2.5.0"
+    api("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+
     // KTX
     api("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
     api("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
     api("androidx.collection:collection-ktx:1.2.0")
+    api("androidx.room:room-ktx:2.5.0")
 
     // immersionbar
     // 基础依赖包，必须要依赖

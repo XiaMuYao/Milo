@@ -10,7 +10,10 @@ import com.confluence.milobox.adapter.BaseNoChildClickAdapter
 import com.confluence.milobox.base.BaseFragment
 import com.confluence.milobox.extension.defaultStyle
 import com.confluence.milobox.extension.viewBinding
+import com.confluence.milobox.utils.LL
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class UserFragment : BaseFragment() {
 
     override val viewModel: MainViewModel by viewModels()
@@ -33,6 +36,10 @@ class UserFragment : BaseFragment() {
     override fun initView() {
         binding.indexTv.text = arguments?.getInt("index").toString()
         binding.userRv.defaultStyle(testAdapter)
+        testAdapter.setOnItemClickListener { adapter, _, position ->
+            LL.d("data ${adapter.items[position]}")
+            viewModel.getSerialCall()
+        }
     }
 
     override fun initVVMObserver() {

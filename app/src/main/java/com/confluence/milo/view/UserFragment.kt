@@ -38,7 +38,6 @@ class UserFragment : BaseFragment() {
         binding.userRv.defaultStyle(testAdapter)
         testAdapter.setOnItemClickListener { adapter, _, position ->
             LL.d("data ${adapter.items[position]}")
-            viewModel.getSerialCall()
         }
     }
 

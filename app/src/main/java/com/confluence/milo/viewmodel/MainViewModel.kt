@@ -1,5 +1,6 @@
 package com.confluence.milo.viewmodel
 
+import androidx.lifecycle.MutableLiveData
 import com.confluence.milo.model.MainRepository
 import com.confluence.milobox.base.BaseViewModel
 import com.confluence.milobox.utils.LL
@@ -14,6 +15,8 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(private val repository: MainRepository) : BaseViewModel() {
 
+    var flowLiveData = MutableLiveData<Any>()
+
     override fun initData() {
 
     }
@@ -26,10 +29,34 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
         }
     }
 
-    fun getSAsyncCall() {
+    fun getAsyncCall() {
         request {
             val data1 = repository.getAsyncBanner()
             LL.d("结果:${data1}")
+        }
+    }
+
+
+    fun getUserList() {
+        request {
+            val userData = repository.getUserData()
+            LL.d("$userData")
+        }
+    }
+
+    fun saveUserData() {
+        request {
+            repository.saveUserData()
+        }
+    }
+
+    fun getFlowData() {
+        request {
+            val flowData = repository.getFlowData()
+            flowData.collect {
+                flowLiveData.postValue(it)
+                LL.d("it:${it}")
+            }
         }
     }
 

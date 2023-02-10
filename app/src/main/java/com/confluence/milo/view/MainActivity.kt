@@ -44,11 +44,27 @@ class MainActivity : BaseActivity() {
         binding.button.setOnClickListener {
             viewModel.getSerialCall()
         }
+        binding.button1.setOnClickListener {
+            viewModel.getAsyncCall()
+        }
+
+
+        binding.get.setOnClickListener {
+            viewModel.getUserList()
+        }
+        binding.save.setOnClickListener {
+            viewModel.saveUserData()
+        }
+        binding.getFlowData.setOnClickListener {
+            viewModel.getFlowData()
+        }
     }
 
 
     override fun initVVMObserver() {
-
+        viewModel.flowLiveData.observe(this) {
+            LL.d("live data ${it}")
+        }
     }
 
     override fun initViewModelBindValue() {

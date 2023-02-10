@@ -5,12 +5,12 @@ import com.confluence.milo.model.RemoteUserSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityRetainedComponent
+import dagger.hilt.components.SingletonComponent
 
 
 @Module
-@InstallIn(ActivityRetainedComponent::class)
-object DateSourceModule {
+@InstallIn(SingletonComponent::class)
+object RemoteSourceModule {
     @Provides
     fun provideRemoteUserSource(): RemoteUserSource {
         return ServiceCreator.create(RemoteUserSource::class.java)

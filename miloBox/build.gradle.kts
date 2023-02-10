@@ -56,6 +56,7 @@ dependencies {
     val roomVersion = "2.5.0"
     api("androidx.room:room-runtime:$roomVersion")
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    androidTestImplementation("androidx.room:room-testing:$roomVersion")
 
     // KTX
     api("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")

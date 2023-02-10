@@ -33,6 +33,7 @@ dependencies {
     api("androidx.core:core-ktx:1.9.0")
     api("androidx.collection:collection-ktx:1.2.0")
     api("androidx.fragment:fragment-ktx:1.5.5")
+    api("androidx.constraintlayout:constraintlayout:2.1.4")
 
     api("androidx.appcompat:appcompat:1.5.1")
     api("com.google.android.material:material:1.7.0")
@@ -40,29 +41,25 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.4")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
 
-
     // Brvah
     api("io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.0-beta02")
 
-    // lifecycle
-    val lifecycleVersion = "2.5.1"
-    api("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
-    api("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
-
     // coroutines
     api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-
 
     val roomVersion = "2.5.0"
     api("androidx.room:room-runtime:$roomVersion")
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
     androidTestImplementation("androidx.room:room-testing:$roomVersion")
 
+    // lifecycle
+    val lifecycleVersion = "2.5.1"
     // KTX
-    api("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
     api("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+    api("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
     api("androidx.collection:collection-ktx:1.2.0")
     api("androidx.room:room-ktx:2.5.0")
+    api("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
 
     // immersionbar
     // 基础依赖包，必须要依赖
@@ -90,5 +87,8 @@ dependencies {
 
     //Glide
     api("com.github.bumptech.glide:glide:4.12.0")
+
+    //PermissionX
+    api("com.guolindev.permissionx:permissionx:1.7.1")
 
 }

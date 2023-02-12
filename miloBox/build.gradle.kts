@@ -91,4 +91,8 @@ dependencies {
     //PermissionX
     api("com.guolindev.permissionx:permissionx:1.7.1")
 
+    //BackgroundLibrary
+    api("com.github.JavaNoober.BackgroundLibrary:libraryx:1.7.5")
+
+
 }

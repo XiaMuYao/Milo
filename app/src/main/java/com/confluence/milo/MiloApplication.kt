@@ -1,6 +1,7 @@
 package com.confluence.milo
 
 import android.app.Application
+import com.confluence.milobox.MiloBoxApplication
 import dagger.hilt.android.HiltAndroidApp
 import kotlin.properties.Delegates
 
@@ -19,5 +20,7 @@ class MiloApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+        MiloBoxApplication.init(instance)
     }
+
 }

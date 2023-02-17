@@ -1,5 +1,11 @@
 package com.confluence.milobox.extension
 
+import android.content.Intent
+import android.os.Bundle
+import android.os.Parcelable
+import androidx.core.os.bundleOf
+import java.io.Serializable
+
 inline fun intentOf(vararg pairs: Pair<String, Any?>) =
     intentOf(bundleOf(*pairs))
 
@@ -55,7 +61,7 @@ fun Intent.put(key: String, value: Any?) {
                 CharSequence::class.java.isAssignableFrom(componentType) -> {
                     putExtra(key, value as Array<CharSequence>)
                 }
-                Serializable::class.java.isAssignableFrom(componentType) -> {
+                java.io.Serializable::class.java.isAssignableFrom(componentType) -> {
                     putExtra(key, value)
                 }
                 else -> {

@@ -26,7 +26,7 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Serial"
+            android:text="串行"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/headerBH" />
 
@@ -34,7 +34,7 @@
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Async"
+            android:text="并发"
             app:layout_constraintStart_toEndOf="@id/button"
             app:layout_constraintTop_toBottomOf="@+id/headerBH" />
 
@@ -43,7 +43,7 @@
             android:id="@+id/buttonAllArticle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AllArticle"
+            android:text="获取所有文章"
             app:layout_constraintStart_toEndOf="@+id/button1"
             app:layout_constraintTop_toBottomOf="@+id/headerBH" />
 
@@ -52,7 +52,7 @@
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="save"
+            android:text="保存一条数据"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -60,7 +60,7 @@
             android:id="@+id/get"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="get"
+            android:text="获取数据"
             app:layout_constraintStart_toEndOf="@id/save"
             app:layout_constraintTop_toTopOf="@+id/save" />
 
@@ -69,7 +69,7 @@
             android:id="@+id/getFlowData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="flow Data"
+            android:text="流数据"
             app:layout_constraintBaseline_toBaselineOf="@+id/get"
             app:layout_constraintStart_toEndOf="@id/get" />
 

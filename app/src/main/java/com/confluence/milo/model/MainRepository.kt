@@ -78,7 +78,7 @@ class MainRepository @Inject constructor(
 
         val list = mutableListOf<Deferred<BaseResponse<ArticleData>>>()
 
-        (2..11).forEach {
+        (2..100).forEach {
             list.add(
                 async {
                     remoteUserSource.getArticle(it)

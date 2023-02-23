@@ -6,6 +6,7 @@ import com.confluence.milobox.base.BaseViewModel
 import com.confluence.milobox.utils.LL
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
+import kotlin.system.measureTimeMillis
 
 /**
  * ================================================
@@ -62,9 +63,11 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
 
     fun getAllArticleData() {
         request {
-            LL.d("it getAllArticleData  start :${System.currentTimeMillis()}")
-            val allArticle = repository.getAllArticle()
-            LL.d("it getAllArticleData end:${allArticle.size}")
+            val measureTimeMillis = measureTimeMillis {
+                val allArticle = repository.getAllArticle()
+                allArticle
+            }
+            LL.d("it getAllArticleData measureTimeMillis:${measureTimeMillis}")
         }
     }
 

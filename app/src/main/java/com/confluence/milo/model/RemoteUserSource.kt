@@ -1,9 +1,11 @@
 package com.confluence.milo.model
 
+import com.confluence.milo.model.bean.ArticleData
 import com.confluence.milo.model.bean.Banner
 import com.confluence.milo.model.bean.Friend
 import com.confluence.milobox.base.BaseResponse
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 /**
  * ================================================
@@ -23,4 +25,9 @@ interface RemoteUserSource {
      */
     @GET("friend/json")
     suspend fun getFriendWeb(): BaseResponse<List<Friend>>
+
+    @GET("article/list/{page}/json")
+    suspend fun getArticle(@Path("page") page: Int): BaseResponse<ArticleData>
+
+
 }

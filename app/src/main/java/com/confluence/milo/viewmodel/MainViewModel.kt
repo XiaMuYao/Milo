@@ -60,5 +60,12 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
         }
     }
 
+    fun getAllArticleData() {
+        request {
+            LL.d("it getAllArticleData  start :${System.currentTimeMillis()}")
+            val allArticle = repository.getAllArticle()
+            LL.d("it getAllArticleData end:${allArticle.size}")
+        }
+    }
 
 }

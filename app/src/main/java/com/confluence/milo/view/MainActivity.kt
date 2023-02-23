@@ -58,6 +58,10 @@ class MainActivity : BaseActivity() {
         binding.getFlowData.setOnClickListener {
             viewModel.getFlowData()
         }
+
+        binding.buttonAllArticle.setOnClickListener {
+            viewModel.getAllArticleData()
+        }
     }
 
 

@@ -1,14 +1,13 @@
 package com.confluence.milo.model
 
+import com.confluence.milo.model.bean.ArticleData
+import com.confluence.milo.model.bean.Banner
 import com.confluence.milo.model.bean.Friend
 import com.confluence.milo.model.databse.User
 import com.confluence.milo.model.databse.UserDao
 import com.confluence.milobox.base.BaseResponse
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 /**
@@ -23,15 +22,34 @@ class MainRepository @Inject constructor(
 
     suspend fun friendWeb(): BaseResponse<List<Friend>> {
         remoteUserSource.getBanner()
+        remoteUserSource.getBanner()
+        remoteUserSource.getBanner()
+        remoteUserSource.getBanner()
         return remoteUserSource.getFriendWeb()
     }
 
     suspend fun getBanner() = remoteUserSource.getBanner()
 
     suspend fun getAsyncBanner() = withContext(Dispatchers.IO) {
+        val list = mutableListOf<Deferred<BaseResponse<List<Banner>>>>()
+
+        list.add(async {
+            delay(5 * 1000)
+            remoteUserSource.getBanner()
+        })
+
+        list.add(async {
+            delay(1 * 1000)
+            remoteUserSource.getBanner()
+        })
+
+
         val data1 = async { remoteUserSource.getBanner() }
         val data2 = async { remoteUserSource.getFriendWeb() }
         return@withContext data1.await().data + data2.await().data
+
+
+//        return@withContext list.awaitAll()
     }
 
     suspend fun getUserData(): List<User> {
@@ -39,12 +57,35 @@ class MainRepository @Inject constructor(
     }
 
     suspend fun saveUserData() {
-        userDao.insertAll(User(uid = System.currentTimeMillis().toInt(), firstName = "xia", lastName = "muyao"))
+        userDao.insertAll(
+            User(
+                uid = System.currentTimeMillis().toInt(),
+                firstName = "xia",
+                lastName = "muyao"
+            )
+        )
     }
 
     suspend fun getFlowData() = flow {
         emit(getBanner())
         delay(5 * 1000)
         emit(getUserData())
+    }
+
+
+    suspend fun getAllArticle() = withContext(Dispatchers.IO) {
+        val article = remoteUserSource.getArticle(1)
+
+        val list = mutableListOf<Deferred<BaseResponse<ArticleData>>>()
+
+        (2..11).forEach {
+            list.add(
+                async {
+                    remoteUserSource.getArticle(it)
+                }
+            )
+        }
+        return@withContext list.awaitAll()
+
     }
 }

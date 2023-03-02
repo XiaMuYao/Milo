@@ -75,3 +75,6 @@ dependencies {
     kapt("androidx.room:room-compiler:$roomVersion")
 
 }
+android {
+    namespace = "com.confluence.milo"
+}

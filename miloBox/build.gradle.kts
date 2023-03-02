@@ -27,6 +27,7 @@ android {
 
 
     buildFeatures.dataBinding = true
+    namespace = "com.confluence.milobox"
 }
 
 dependencies {

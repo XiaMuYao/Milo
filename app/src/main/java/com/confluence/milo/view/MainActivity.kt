@@ -1,6 +1,8 @@
 package com.confluence.milo.view
 
+import android.os.Build
 import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import com.confluence.milo.databinding.ActivityMainBinding
 import com.confluence.milo.viewmodel.MainViewModel
 import com.confluence.milobox.adapter.BaseViewPagerAdapter
@@ -20,6 +22,7 @@ class MainActivity : BaseActivity() {
     private val mainViewPagerAdapter =
         BaseViewPagerAdapter(this, (0..4).map { UserFragment.newInstance(it) }.toMutableList())
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun initView() {
         binding.ViewPager2.adapter = mainViewPagerAdapter
         binding.bottomMenuBBM.setCallBackAndViewPager(binding.ViewPager2, object : BaseBottomMenu.BaseBottomMenuCallBack {

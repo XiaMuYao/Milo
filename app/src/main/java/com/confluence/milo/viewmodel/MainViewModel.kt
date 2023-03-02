@@ -56,7 +56,6 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
             val flowData = repository.getFlowData()
             flowData.collect {
                 flowLiveData.postValue(it)
-                LL.d("it:${it}")
             }
         }
     }

@@ -34,12 +34,11 @@ class MainRepository @Inject constructor(
         val list = mutableListOf<Deferred<BaseResponse<List<Banner>>>>()
 
         list.add(async {
-            delay(5 * 1000)
-            remoteUserSource.getBanner()
+            val banner = remoteUserSource.getBanner()
+            banner
         })
 
         list.add(async {
-            delay(1 * 1000)
             remoteUserSource.getBanner()
         })
 
@@ -66,10 +65,11 @@ class MainRepository @Inject constructor(
         )
     }
 
+
     suspend fun getFlowData() = flow {
         emit(getBanner())
-        delay(5 * 1000)
         emit(getUserData())
+//        delay(5 * 1000)
     }
 
 

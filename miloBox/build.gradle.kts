@@ -32,7 +32,6 @@ android {
 
 dependencies {
     api("androidx.core:core-ktx:1.9.0")
-    api("androidx.collection:collection-ktx:1.2.0")
     api("androidx.fragment:fragment-ktx:1.5.5")
     api("androidx.constraintlayout:constraintlayout:2.1.4")
 

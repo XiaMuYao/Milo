@@ -10,11 +10,11 @@ object JSONUtils {
         return Gson().fromJson(jsonString, classOfT.java)
     }
 
-    fun Any.toJson(obj: Any, pretty: Boolean = true): String {
+    fun Any.toJson(pretty: Boolean = true): String {
         if (pretty) {
-            return GsonBuilder().setPrettyPrinting().create().toJson(obj)
+            return GsonBuilder().setPrettyPrinting().create().toJson(this)
         }
-        return Gson().toJson(obj)
+        return Gson().toJson(this)
     }
 
 }

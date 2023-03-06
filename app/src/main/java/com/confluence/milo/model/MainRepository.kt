@@ -21,10 +21,6 @@ class MainRepository @Inject constructor(
 ) {
 
     suspend fun friendWeb(): BaseResponse<List<Friend>> {
-        remoteUserSource.getBanner()
-        remoteUserSource.getBanner()
-        remoteUserSource.getBanner()
-        remoteUserSource.getBanner()
         return remoteUserSource.getFriendWeb()
     }
 

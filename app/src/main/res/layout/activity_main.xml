@@ -16,7 +16,7 @@
         tools:context=".view.MainActivity">
 
         <com.confluence.milobox.view.BaseHeader
-            android:id="@+id/headerBH"
+            android:id="@+id/mainPageHeadView"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="串行"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/headerBH" />
+            app:layout_constraintTop_toBottomOf="@+id/mainPageHeadView" />
 
         <Button
             android:id="@+id/button1"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="并发"
             app:layout_constraintStart_toEndOf="@id/button"
-            app:layout_constraintTop_toBottomOf="@+id/headerBH" />
+            app:layout_constraintTop_toBottomOf="@+id/mainPageHeadView" />
 
 
         <Button
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="获取所有文章"
             app:layout_constraintStart_toEndOf="@+id/button1"
-            app:layout_constraintTop_toBottomOf="@+id/headerBH" />
+            app:layout_constraintTop_toBottomOf="@+id/mainPageHeadView" />
 
 
         <Button
@@ -77,13 +77,13 @@
             android:id="@+id/ViewPager2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/bottomMenuBBM"
+            app:layout_constraintBottom_toTopOf="@+id/mainPageBottomMenuView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
         <com.confluence.milobox.view.BaseBottomMenu
-            android:id="@+id/bottomMenuBBM"
+            android:id="@+id/mainPageBottomMenuView"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             app:layout_constraintBottom_toBottomOf="parent" />

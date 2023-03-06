@@ -5,48 +5,49 @@
 
     <data>
 
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/headerCl"
+        tools:background="#FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="40dp">
 
         <ImageView
-            android:id="@+id/backIv"
+            android:id="@+id/headLeftIv"
             android:layout_width="@dimen/dp_40"
             android:layout_height="@dimen/dp_40"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="#00BCD4"
-            tools:background="#00BCD4"
-
-            />
+            tools:background="#00BCD4" />
 
         <TextView
-            android:id="@+id/titleTv"
+            android:id="@+id/headTitleTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="title"
             tools:text="title" />
 
         <ImageView
-            android:id="@+id/menuIv"
+            android:id="@+id/headCenterIv"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/headRightIv"
             android:layout_width="@dimen/dp_40"
             android:layout_height="@dimen/dp_40"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="#00BCD4"
-            tools:background="#00BCD4"
-
-            />
+            tools:background="#00BCD4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

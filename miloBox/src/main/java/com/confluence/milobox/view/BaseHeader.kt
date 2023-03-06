@@ -4,8 +4,6 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.databinding.DataBindingUtil
-import com.confluence.milobox.R
 import com.confluence.milobox.databinding.BaseHeaderBinding
 
 /**
@@ -36,23 +34,17 @@ class BaseHeader : ConstraintLayout {
     var baseHeaderCallBack: BaseHeaderCallBack? = null
 
     interface BaseHeaderCallBack {
-        fun back() {}
-        fun menu() {}
+        fun leftClickCallBack() {}
+        fun rightClickCallBack() {}
     }
 
     lateinit var binding: BaseHeaderBinding
 
     private fun initView() {
-        binding = DataBindingUtil.inflate(
-            LayoutInflater.from(context),
-            R.layout.base_header,
-            this,
-            true
-        )
-        binding.backIv.setOnClickListener { baseHeaderCallBack?.back() }
-        binding.menuIv.setOnClickListener { baseHeaderCallBack?.menu() }
-
+        binding =
+            BaseHeaderBinding.inflate(LayoutInflater.from(context), this, true)
+        binding.headLeftIv.setOnClickListener { baseHeaderCallBack?.leftClickCallBack() }
+        binding.headRightIv.setOnClickListener { baseHeaderCallBack?.rightClickCallBack() }
     }
-
 
 }

@@ -25,24 +25,30 @@ class MainActivity : BaseActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun initView() {
         binding.ViewPager2.adapter = mainViewPagerAdapter
-        binding.bottomMenuBBM.setCallBackAndViewPager(binding.ViewPager2, object : BaseBottomMenu.BaseBottomMenuCallBack {
-            override fun menuSelectCallBack(id: BaseBottomMenu.MainTabPage, ordinal: Int) {
-                LL.d("id::${id}")
-            }
+        binding.mainPageBottomMenuView.setCallBackAndViewPager(
+            binding.ViewPager2,
+            object : BaseBottomMenu.BaseBottomMenuCallBack {
+                override fun menuSelectCallBack(
+                    id: BaseBottomMenu.MainTabPage,
+                    ordinal: Int,
+                ) {
 
-            override fun onPageSelected(position: Int) {
-            }
-        })
+                }
 
-        binding.headerBH.baseHeaderCallBack = object : BaseHeader.BaseHeaderCallBack {
-            override fun back() {
-                LL.d("back")
-            }
+                override fun onPageSelected(position: Int) {
+                }
+            })
 
-            override fun menu() {
-                LL.d("menu")
+        binding.mainPageHeadView.baseHeaderCallBack =
+            object : BaseHeader.BaseHeaderCallBack {
+                override fun leftClickCallBack() {
+                    LL.d("back")
+                }
+
+                override fun rightClickCallBack() {
+                    LL.d("menu")
+                }
             }
-        }
 
         binding.button.setOnClickListener {
             viewModel.getSerialCall()
@@ -70,7 +76,6 @@ class MainActivity : BaseActivity() {
 
     override fun initVVMObserver() {
         viewModel.flowLiveData.observe(this) {
-            LL.d("live data ${it}")
         }
     }
 

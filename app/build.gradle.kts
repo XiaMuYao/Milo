@@ -41,14 +41,16 @@ android {
             proguardFile("proguard-android-optimize.txt")
         }
     }
-    compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_11)
-        targetCompatibility(JavaVersion.VERSION_11)
-    }
-
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.majorVersion
 
     buildFeatures.dataBinding = true
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_18
+        targetCompatibility = JavaVersion.VERSION_18
+    }
+    kotlinOptions {
+        jvmTarget = "18"
+    }
 
     applicationVariants.all {
         outputs.all {
@@ -68,10 +70,10 @@ android {
 dependencies {
     implementation(project(path = ":miloBox"))
 
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
 
-    val roomVersion = "2.5.0"
+    val roomVersion = "2.5.2"
     kapt("androidx.room:room-compiler:$roomVersion")
 
 }

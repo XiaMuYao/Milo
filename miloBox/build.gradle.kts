@@ -1,9 +1,8 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
-
-
 
 android {
     compileSdk = 33
@@ -19,46 +18,45 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_11)
-        targetCompatibility(JavaVersion.VERSION_11)
+        sourceCompatibility = JavaVersion.VERSION_18
+        targetCompatibility = JavaVersion.VERSION_18
     }
-
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.majorVersion
-
-
+    kotlinOptions {
+        jvmTarget = "18"
+    }
     buildFeatures.dataBinding = true
     namespace = "com.confluence.milobox"
 }
 
 dependencies {
-    api("androidx.core:core-ktx:1.9.0")
-    api("androidx.fragment:fragment-ktx:1.5.5")
+    api("androidx.core:core-ktx:1.10.1")
+    api("androidx.fragment:fragment-ktx:1.6.1")
     api("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    api("androidx.appcompat:appcompat:1.5.1")
-    api("com.google.android.material:material:1.7.0")
+    api("androidx.appcompat:appcompat:1.6.1")
+    api("com.google.android.material:material:1.9.0")
     testApi("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.4")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     // Brvah
-    api("io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.0-beta02")
+    api("io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.1")
 
     // coroutines
-    api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
-    val roomVersion = "2.5.0"
+    val roomVersion = "2.5.2"
     api("androidx.room:room-runtime:$roomVersion")
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
     androidTestImplementation("androidx.room:room-testing:$roomVersion")
 
     // lifecycle
-    val lifecycleVersion = "2.5.1"
+    val lifecycleVersion = "2.6.1"
     // KTX
-    api("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+    api("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     api("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
     api("androidx.collection:collection-ktx:1.2.0")
-    api("androidx.room:room-ktx:2.5.0")
+    api("androidx.room:room-ktx:2.5.2")
     api("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
 
     // immersionbar
@@ -71,7 +69,7 @@ dependencies {
     api("io.github.jeremyliao:live-event-bus-x:1.8.0")
 
     //gson
-    api("com.google.code.gson:gson:2.9.0")
+    api("com.google.code.gson:gson:2.10.1")
 
     //retrofit
     api("com.squareup.retrofit2:retrofit:2.9.0")
@@ -80,13 +78,13 @@ dependencies {
 
 
     //SmartRefreshLayout
-    api("io.github.scwang90:refresh-layout-kernel:2.0.5")
+    api("io.github.scwang90:refresh-layout-kernel:2.0.6")
 
     //MagicIndicator
     api("com.github.XuQK:KDTabLayout:1.1.6")
 
     //Glide
-    api("com.github.bumptech.glide:glide:4.12.0")
+    api("com.github.bumptech.glide:glide:4.16.0")
 
     //PermissionX
     api("com.guolindev.permissionx:permissionx:1.7.1")

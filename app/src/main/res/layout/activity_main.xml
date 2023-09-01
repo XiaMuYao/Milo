@@ -22,56 +22,68 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonCl"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="串行"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mainPageHeadView" />
+            app:layout_constraintTop_toBottomOf="@+id/mainPageHeadView">
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="并发"
-            app:layout_constraintStart_toEndOf="@id/button"
-            app:layout_constraintTop_toBottomOf="@+id/mainPageHeadView" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="串行"
+                app:layout_constraintStart_toStartOf="parent" />
 
-
-        <Button
-            android:id="@+id/buttonAllArticle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="获取所有文章"
-            app:layout_constraintStart_toEndOf="@+id/button1"
-            app:layout_constraintTop_toBottomOf="@+id/mainPageHeadView" />
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="并发"
+                app:layout_constraintStart_toEndOf="@id/button" />
 
 
-        <Button
-            android:id="@+id/save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="保存一条数据"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
-
-        <Button
-            android:id="@+id/get"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="获取数据"
-            app:layout_constraintStart_toEndOf="@id/save"
-            app:layout_constraintTop_toTopOf="@+id/save" />
+            <Button
+                android:id="@+id/buttonAllArticle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取所有文章"
+                app:layout_constraintStart_toEndOf="@+id/button1" />
 
 
-        <Button
-            android:id="@+id/getFlowData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="流数据"
-            app:layout_constraintBaseline_toBaselineOf="@+id/get"
-            app:layout_constraintStart_toEndOf="@id/get" />
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保存一条数据"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button" />
+
+            <Button
+                android:id="@+id/get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取数据"
+                app:layout_constraintStart_toEndOf="@id/save"
+                app:layout_constraintTop_toTopOf="@+id/save" />
+
+
+            <Button
+                android:id="@+id/getFlowData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="流数据"
+                app:layout_constraintBaseline_toBaselineOf="@+id/get"
+                app:layout_constraintStart_toEndOf="@id/get" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="500dp" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/ViewPager2"
@@ -80,7 +92,7 @@
             app:layout_constraintBottom_toTopOf="@+id/mainPageBottomMenuView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonCl" />
 
         <com.confluence.milobox.view.BaseBottomMenu
             android:id="@+id/mainPageBottomMenuView"

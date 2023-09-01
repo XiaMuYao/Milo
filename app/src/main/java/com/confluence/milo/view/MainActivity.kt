@@ -1,5 +1,7 @@
 package com.confluence.milo.view
 
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.os.Build
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
@@ -69,7 +71,17 @@ class MainActivity : BaseActivity() {
         }
 
         binding.buttonAllArticle.setOnClickListener {
-            viewModel.getAllArticleData()
+//            viewModel.getAllArticleData()
+            val bitmap = Bitmap.createBitmap(
+                binding.buttonCl.width,
+                binding.buttonCl.height,
+                Bitmap.Config.ARGB_8888
+            )
+
+            val canvas = Canvas(bitmap)
+
+            binding.imageview.draw(canvas)
+            bitmap
         }
     }
 

@@ -62,7 +62,8 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
 
     fun getAllArticleData() {
         request {
-            val measureTimeMillis = measureTimeMillis {
+
+        val measureTimeMillis = measureTimeMillis {
                 val allArticle = repository.getAllArticle()
                 allArticle
             }
